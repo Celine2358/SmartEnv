@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/TimeBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/MenuBar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/noon" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/MenuBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:background="#00FFFFFF"
+        android:fontFamily="@font/lineregular"
+        android:minHeight="?attr/actionBarSize"
+        android:shadowColor="#000000"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="3"
+        android:textColor="#FF5722"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/DateText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextClock
+        android:id="@+id/textClock"
+        android:layout_width="227dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="50dp"
+        android:fontFamily="@font/linebold"
+        android:format12Hour="a hh:mm:ss"
+        android:format24Hour="a HH:mm:ss"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@+id/temp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DateText" />
+
+    <TextView
+        android:id="@+id/dust"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginBottom="60dp"
+        android:fontFamily="@font/lineregular"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="#000000"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/hc06switch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/Dust"
+        app:layout_constraintTop_toBottomOf="@+id/hum" />
+
+    <ImageView
+        android:id="@+id/Temperature"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="107dp"
+        app:layout_constraintBottom_toBottomOf="@+id/Humidity"
+        app:layout_constraintEnd_toStartOf="@+id/temp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textClock"
+        app:srcCompat="@drawable/temp" />
+
+    <TextView
+        android:id="@+id/temp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginBottom="41dp"
+        android:fontFamily="@font/lineregular"
+        android:gravity="center"
+        android:text="°C"
+        android:textColor="#000000"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/hum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Temperature"
+        app:layout_constraintTop_toBottomOf="@+id/textClock" />
+
+    <ImageView
+        android:id="@+id/Humidity"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/Dust"
+        app:layout_constraintEnd_toStartOf="@+id/hum"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/temp"
+        app:srcCompat="@drawable/hum" />
+
+    <ImageView
+        android:id="@+id/Dust"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="201dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="200dp"
+        app:layout_constraintBottom_toTopOf="@+id/battery"
+        app:layout_constraintEnd_toStartOf="@+id/dust"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/temp"
+        app:srcCompat="@drawable/dust" />
+
+    <TextView
+        android:id="@+id/hum"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginBottom="43dp"
+        android:fontFamily="@font/lineregular"
+        android:gravity="center"
+        android:text="%"
+        android:textColor="#000000"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/dust"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Humidity"
+        app:layout_constraintTop_toBottomOf="@+id/temp" />
+
+    <Switch
+        android:id="@+id/hc06switch"
+        android:layout_width="182dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="73dp"
+        android:background="@drawable/button_background"
+        android:fontFamily="@font/linebold"
+        android:gravity="center"
+        android:text="Start"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/battery"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dust" />
+
+    <TextView
+        android:id="@+id/DateText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginBottom="1dp"
+        android:fontFamily="@font/linebold"
+        android:gravity="center"
+        android:text="DateText"
+        android:textColor="#000000"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@+id/textClock"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MenuBar" />
+
+    <ImageView
+        android:id="@+id/battery"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hc06switch"
+        app:srcCompat="@drawable/batteryfull" />
+
+    <TextView
+        android:id="@+id/batteryInt"
+        android:layout_width="105dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="9dp"
+        android:fontFamily="@font/linebold"
+        android:gravity="left|center_vertical"
+        android:text="0%"
+        android:textColor="#000000"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/battery"
+        app:layout_constraintStart_toStartOf="@+id/battery"
+        app:layout_constraintTop_toTopOf="@+id/battery"
+        app:layout_constraintVertical_bias="0.555" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

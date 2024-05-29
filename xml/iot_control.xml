@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/controlmain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        tools:layout_editor_absoluteX="48dp"
+        tools:layout_editor_absoluteY="-52dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/MenuBar2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme" />
+
+            <TextView
+                android:id="@+id/ControlTitle"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/linebold"
+                android:gravity="center"
+                android:text="SmartEnv 제어 설정"
+                android:textColor="#000000"
+                android:textSize="27sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="114dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/tempcontrol"
+                    android:layout_width="168dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/temp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/coldtemp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/coldtempin"
+                            android:layout_width="260dp"
+                            android:layout_height="50dp"
+                            android:fontFamily="@font/lineregular"
+                            android:gravity="center"
+                            android:hint="온풍기 작동 온도 ex) 19" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/hottemp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/hottempin"
+                            android:layout_width="260dp"
+                            android:layout_height="50dp"
+                            android:fontFamily="@font/lineregular"
+                            android:gravity="center"
+                            android:hint="선풍기 작동 온도 ex) 26" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/tempbutton"
+                android:layout_width="207dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/lineregular"
+                android:gravity="center"
+                android:text="온도 적용"
+                android:textSize="16sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/humcontrol"
+                    android:layout_width="168dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/hum" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/lowhum"
+                        android:layout_width="300dp"
+                        android:layout_height="60dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/lowhumin"
+                            android:layout_width="260dp"
+                            android:layout_height="50dp"
+                            android:fontFamily="@font/lineregular"
+                            android:gravity="center"
+                            android:hint="가습기 작동 습도 ex) 40" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/humbutton"
+                android:layout_width="207dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/lineregular"
+                android:gravity="center"
+                android:text="습도 적용"
+                android:textSize="16sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/dustcontrol"
+                    android:layout_width="168dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/dust" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/dustset"
+                        android:layout_width="300dp"
+                        android:layout_height="60dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/dustsetin"
+                            android:layout_width="260dp"
+                            android:layout_height="50dp"
+                            android:fontFamily="@font/lineregular"
+                            android:gravity="center"
+                            android:hint="미세먼지 농도 ex)20" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/dustbutton"
+                android:layout_width="207dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/lineregular"
+                android:gravity="center"
+                android:text="미세먼지 적용"
+                android:textSize="16sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="29dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/fancontrol"
+                    android:layout_width="168dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/fan" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/fantext"
+                        android:layout_width="match_parent"
+                        android:layout_height="41dp"
+                        android:fontFamily="@font/linebold"
+                        android:gravity="center"
+                        android:text="선풍기 설정"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ToggleButton
+                            android:id="@+id/fantoggle"
+                            android:layout_width="125dp"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:fontFamily="@font/lineregular"
+                            android:gravity="center"
+                            android:text="ToggleButton"
+                            android:textOff="수동"
+                            android:textOn="자동" />
+
+                        <CheckBox
+                            android:id="@+id/OnCheck1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:checked="true"
+                            android:text="On" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/humdcontrol"
+                    android:layout_width="168dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/humidifier" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/humdtext"
+                        android:layout_width="match_parent"
+                        android:layout_height="41dp"
+                        android:fontFamily="@font/linebold"
+                        android:gravity="center"
+                        android:text="가습기 설정"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ToggleButton
+                            android:id="@+id/humtoggle"
+                            android:layout_width="125dp"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:fontFamily="@font/lineregular"
+                            android:gravity="center"
+                            android:text="ToggleButton"
+                            android:textOff="수동"
+                            android:textOn="자동" />
+
+                        <CheckBox
+                            android:id="@+id/OnCheck2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:checked="true"
+                            android:text="On" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="29dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/heatercontrol"
+                    android:layout_width="168dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/heater" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/heatertext"
+                        android:layout_width="match_parent"
+                        android:layout_height="41dp"
+                        android:fontFamily="@font/linebold"
+                        android:gravity="center"
+                        android:text="온풍기 설정"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ToggleButton
+                            android:id="@+id/heatertoggle"
+                            android:layout_width="125dp"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:fontFamily="@font/lineregular"
+                            android:gravity="center"
+                            android:text="ToggleButton"
+                            android:textOff="수동"
+                            android:textOn="자동" />
+
+                        <CheckBox
+                            android:id="@+id/OnCheck3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="On" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="29dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/aircontrol"
+                    android:layout_width="168dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/aircleaner" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/airtext"
+                        android:layout_width="match_parent"
+                        android:layout_height="41dp"
+                        android:fontFamily="@font/linebold"
+                        android:gravity="center"
+                        android:text="공기청정기 설정"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ToggleButton
+                            android:id="@+id/airtoggle"
+                            android:layout_width="125dp"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:fontFamily="@font/lineregular"
+                            android:gravity="center"
+                            android:text="ToggleButton"
+                            android:textOff="수동"
+                            android:textOn="자동" />
+
+                        <CheckBox
+                            android:id="@+id/OnCheck4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:checked="true"
+                            android:text="On" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
